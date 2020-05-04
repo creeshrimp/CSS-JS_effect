@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>horver 顯示詳細資訊-改透明度ver</title>
+</head>
+<style>
+    *{
+        box-sizing: border-box;
+        margin: 0;
+        text-decoration: none;
+    }
+    a{
+        color: initial;
+    }
+</style>
+<style>
+    .card-group{
+        height: 800px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .card{
+        font-size: 1.5rem;
+    }
+
+    .figure{
+        position: relative;
+        width: 400px;
+        height: 280px;
+        overflow: hidden;
+    }
+    .card img{
+        width: 100%;
+        height: 100%;
+    }
+    .card .caption{
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, .7);
+        color: white;
+        position: absolute;
+        padding: 1.8rem 2.25rem;
+        top: 0;
+    }
+    .card:hover .caption{
+        transition: .5s;
+        opacity: 1;
+    }
+    .card:hover img{
+        transition: all .5s ease-out;;
+        transform: scale(1.1);
+    }
+
+
+</style>
+<body>
+    <div class="card-group ">
+        <a href="#" class="card">
+            <figure class="figure ">
+                <img src="1.webp" alt="">
+                <figcaption class=" caption ">
+                    <h2>card1</h2> 
+                    <p>一些相關資訊，這是card2的一些相關資訊</p>
+                </figcaption>
+                
+            </figure>
+        </a>
+        <a href="#" class="card">
+            <figure class="figure ">
+                <img src="2.webp" alt="">
+                <figcaption class=" caption ">
+                    <h2>card2</h2>
+                    <p>一些相關資訊，這是card2的一些相關資訊</p>
+                </figcaption>
+                
+            </figure>
+        </a>
+        <a href="#" class="card">
+            <figure class="figure ">
+                <img src="3.webp" alt="">
+                <figcaption class=" caption ">
+                    <h3>card3</h3>
+                    <p>一些相關資訊，這是card3的一些相關資訊</p>
+                </figcaption>
+            </figure>
+        </a>
+        
+        
+    </div>
+</body>
+</html>

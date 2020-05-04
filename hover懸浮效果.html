@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hover懸浮效果</title>
+</head>
+<style>
+    .card-group{
+        height: 800px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .card{
+        width: 200px;
+        height: 400px;
+        background-color: rgb(134, 188, 238);
+    }
+    /* 這hover的class一定要給在外層，給在內層會一直晃動，
+        因為下方hover之後就上移，會一直 hover->不hover->hover 循環 */
+    .floatcard:hover >.card{
+        transform: translateY(-2.5rem);
+        box-shadow: 0 0.75rem 0.75rem rgba(0,0,0,0.35);
+    }
+</style>
+<body>
+    <div class="card-group ">
+        <a href="#" class="floatcard">
+            <div class="card ">card1</div>
+        </a>
+        <a href="#" class="floatcard">
+            <div class="card ">card2</div>
+        </a>
+        <a href="#" class="floatcard">
+            <div class="card ">card3</div>
+        </a>
+        
+        
+    </div>
+</body>
+</html>

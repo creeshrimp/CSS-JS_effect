@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>自動跳下個input測試</title>
+</head>
+
+<body>
+    <form action="" method="get">
+        <input type="text" name="t1" maxlength="4" onkeyup="toNext(this, 't2')">
+        <input type="text" name="t2" maxlength="4" onkeyup="toNext(this, 't3')">
+        <input type="text" name="t3" maxlength="4" onkeyup="toNext(this, 't4')">
+        <input type="submit" name="t4" >
+    </form>
+    <script>
+        function toNext(self, next){
+            if(self.value.length == self.maxLength){
+                self.form.elements[next].focus();
+            }
+        }
+    </script>
+</body>
+</html>

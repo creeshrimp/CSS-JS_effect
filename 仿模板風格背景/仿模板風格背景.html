@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>模板風格背景</title>
+</head>
+<style>
+    *{
+        box-sizing: border-box;
+        border: 0;
+        margin: 0;
+        padding: 0;
+    }
+</style>
+<style>
+    .bg{
+        background-attachment: fixed;
+        background-size: cover;
+        width: 100%;
+        height: 100vh;
+    }
+    .bg1{
+        background-image: url('office.jpg');
+    }
+    .bg2{
+        background-image: url('smartworks.jpg');
+        position: relative;
+        
+    }
+    .bg3{
+        background-image: url('discussion.jpg');
+    }
+    /* article */
+    article{
+        background-color: rgb(213, 231, 241);
+        width: 100%;
+        padding: 1.5rem;
+        font-size: 1.2rem;
+    }
+    .flex-col-article{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    .flex-row-article{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .float-over-article{
+        position: absolute;
+        width: 50%;
+        height: 100%;
+    }
+    article>*{
+        margin-top: 1.5em;
+    }
+    .h600px{
+        height: 600px;
+    }
+    .bgcolor2{
+        background-color: rgb(96, 120, 172);
+        color: white;
+    }
+</style>
+<body>
+    <article class="h600px flex-col-article">
+        <h2>Let Us Introduce Ourselves to You</h2>
+        <p>We are DDin, a game developer who is determined to be one of the top brands in the world. Our team are full of energy. </p>
+        <p>We have creative imaginations and innovative ideas. We laid out precisely in global</p>
+        <p>marketing and take every chance to achieve success for the future.Please join us now to create new revenues together. </p>
+    </article>
+    <div class="bg bg1"></div>
+    <div class="bg bg2 ">
+        <article class="float-over-article flex-col-article bgcolor2">
+            <h2>New Game Contents and Features</h2>
+            <p>We create new and diversified gameplays for players who want to challenge </p>
+            <p>We have creative imaginations and innovative ideas. We laid out precisely in global</p>
+            <p>marketing and take every chance to achieve success for the future.Please join us now to create new revenues together. </p>
+        </article>
+    </div>
+    
+    <div class="bg bg3"></div>
+    <article class="h600px flex-col-article">
+        <h2>Let Us Introduce Ourselves to You</h2>
+        <p>We are DDin, a game developer who is determined to be one of the top brands in the world. Our team are full of energy. </p>
+        <p>We have creative imaginations and innovative ideas. We laid out precisely in global</p>
+        <p>marketing and take every chance to achieve success for the future.Please join us now to create new revenues together. </p>
+    </article>
+</body>
+</html>
