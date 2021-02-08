@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>輪播範例1</title>
+    <!-- 
+        這是個純輪播範例，沒有箭頭跟點點
+        this example is from below link 
+        https://youtu.be/pGHOaY4dhAA
+    -->
+</head>
+<style>
+    body {
+        background-color: rgb(218, 218, 218)
+    }
+    #slider {
+        overflow: hidden;
+        margin-top: 30px;
+        width: 80%;
+        /* border*radius 說明 from w3.org
+        the values before the slash set the horizontal radius and the values after the slash set the vertical radius. 
+        If there is no slash, then the values set both radii equally. */
+        border-radius: 2.5%/4.5%;
+    }
+    /*  */
+    #slider figure {
+        position: relative;
+        display: flex;
+        width: 700%;
+        margin: 0;
+        left: 0%;
+        /* CSS 動畫 */
+        /* 名為slider 一輪總長20秒 持續時間無限*/
+        animation: slider 16s infinite;
+        /* animation: slider 16s infinite cubic-bezier(.77,0,.18,1); */
+        animation-delay: 1s;
+        /* animation-fill-mode: both; */
+    }
+    #slider figure img {
+        width: 100%;
+    }
+    @keyframes slider {
+        0% {
+            left: 0;
+        }
+        16.7% {
+            left: -100%;
+        }
+        33.3% {
+            left: -200%;
+        }
+        50% {
+            left: -300%;
+        }
+        66.6% {
+            left: -400%;
+        }
+        83.3% {
+            left: -500%;
+        }
+        100% {
+            left: -600%;
+        }
+
+    }
+    /* @keyframes slider {
+        0% {
+            left: 0;
+        }
+        20% {
+            left: -100%;
+        }
+        40% {
+            left: -200%;
+        }
+        60% {
+            left: -300%;
+        }
+        80% {
+            left: -400%;
+        }
+        100% {
+            left: -500%;
+        }
+    } */
+</style>
+<body>
+    <div id="slider">
+        <a href="https://cdn.ddingroup.com/lease">
+            <figure>
+                <img src="slider-1.png" alt="">
+                <img src="slider-2.png" alt="">
+                <img src="slider-3.png" alt="">
+                <img src="slider-4.png" alt="">
+                <img src="slider-5.png" alt="">
+                <img src="slider-6.png" alt="">
+                <!-- 再放一張01讓頭尾接起來 -->
+                <img src="slider-1.png" alt="">
+            </figure>
+        </a>
+    </div>
+</body>
+</html>

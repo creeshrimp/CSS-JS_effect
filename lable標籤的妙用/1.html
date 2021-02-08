@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>label的妙用</title>
+</head>
+<body>
+    <h3>把label包在input外面，點擊label就等於點擊input</h3>
+    <label>
+        <input type="checkbox" name="checkbox1" id="">
+        同意服務條款
+    </label>
+    <hr>
+    <h3>就算不包在input外面，只要label的for設成input的id一樣有效果</h3>
+    <input type="checkbox" name="checkbox2" id="checkbox2">
+    <label for="checkbox2">同意服務條款2</label>
+    <hr>
+    <h3>其他類型的input也有作用 可以用來客製化input</h3>
+    <input type="button" value="我是按鈕" id="button1">
+    <label for="button1">觸發button1</label>
+    <br>
+    <input type="file" value="上傳檔案" id="fileupload">
+    <label for="fileupload">觸發fileupload</label>
+</body>
+</html>
